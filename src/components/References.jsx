@@ -29,7 +29,7 @@ const References = () => {
       id: 2,
       title: 'Spelya Yazılım',
       category: 'ecommerce',
-      image: '/img/Spelya.jpg',
+      image: '/img/spelya.jpg',
       description: 'Yazılım platformu',
       size: 'medium'
     },
@@ -37,7 +37,7 @@ const References = () => {
       id: 3,
       title: 'Spokingo',
       category: 'ecommerce',
-      image: '/img/Spokingo.jpg',
+      image: '/img/spokingo.jpg',
       description: 'Dekarasyon Oyuncak',
       size: 'medium'
     },
