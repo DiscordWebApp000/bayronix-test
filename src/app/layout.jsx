@@ -2,13 +2,12 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import FloatingContactButton from '@/components/FloatingContactButton';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Bayronix Group',
-  description: 'Bayronix yazılım ajansı, web geliştirme, mobil uygulama ve dijital çözümler sunar.',
+  title: 'Natron Group',
+  description: 'Natron is a software agency offering web development, mobile applications, and digital solutions.',
   icons: {
     icon: '/favicon.svg',
   },
@@ -24,7 +23,6 @@ export default function RootLayout({ children }) {
         <Header />
         <main>{children}</main>
         <Footer />
-        <FloatingContactButton />
       </body>
     </html>
   );

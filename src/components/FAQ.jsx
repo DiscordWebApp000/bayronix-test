@@ -9,43 +9,43 @@ export default function FAQ() {
   const faqData = [
     {
       id: 1,
-      question: "Hangi alanlarda hizmet veriyorsunuz?",
-      answer: "Bayronix olarak teknoloji danışmanlığı, e-ticaret çözümleri, mobil uygulama geliştirme, web tasarım ve organizasyon yönetimi konularında kapsamlı hizmetler sunuyoruz. Özellikle dijital dönüşüm süreçlerinde şirketlere rehberlik ediyor, modern teknolojilerle iş süreçlerini optimize ediyoruz. Ayrıca özel yazılım geliştirme, sistem entegrasyonları ve bulut çözümleri ile işletmelerin rekabet avantajı elde etmelerine yardımcı oluyoruz.",
+      question: "What areas do you provide services in?",
+      answer: "As Natron, we provide comprehensive services in technology consulting, e-commerce solutions, mobile app development, web design and organization management. We particularly guide companies in digital transformation processes and optimize business processes with modern technologies. Additionally, we help businesses gain competitive advantage through custom software development, system integrations and cloud solutions.",
       icon: "🏢",
       color: "from-blue-500 to-purple-600"
     },
     {
       id: 2,
-      question: "Şirketinizin deneyimi ne kadar?",
-      answer: "2022 yılından bu yana teknoloji sektöründe faaliyet gösteren Bayronix, 10 yıllık köklü deneyimi ile 500'den fazla başarılı projeyi hayata geçirmiştir. Bu süreçte küçük ölçekli startup'lardan büyük kurumsal şirketlere kadar geniş bir yelpazede müşteriye hizmet verdik. Ekibimiz sürekli gelişen teknolojileri takip ederek, sektördeki en güncel çözümleri müşterilerimize sunar. Deneyimli kadromuz sayesinde karmaşık projeleri bile başarıyla tamamlama konusunda uzmanlaşmış durumdayız.",
+      question: "How much experience does your company have?",
+      answer: "Natron, which has been operating in the technology sector since 2022, has successfully completed more than 500 projects with its 10 years of solid experience. During this process, we served customers from small-scale startups to large corporate companies. Our team follows continuously evolving technologies and offers the most up-to-date solutions in the sector to our customers. Thanks to our experienced staff, we have become experts in successfully completing even complex projects.",
       icon: "⏱️",
       color: "from-green-500 to-blue-600"
     },
     {
       id: 3,
-      question: "Hangi büyüklükteki şirketlerle çalışıyorsunuz?",
-      answer: "Startup'lardan Fortune 500 şirketlerine kadar her ölçekte işletmeyle çalışma deneyimimiz bulunmaktadır. Küçük girişimler için uygun maliyetli çözümler geliştirirken, büyük şirketler için kurumsal düzeyde kapsamlı projeler yürütüyoruz. Her müşterimizin ihtiyaçları farklı olduğu için esnek yaklaşımımızla, bütçe ve gereksinimlerine uygun özelleştirilmiş çözümler sunuyoruz. Proje büyüklüğü ne olursa olsun, aynı kaliteli hizmet anlayışını benimser ve müşteri memnuniyetini ön planda tutarız.",
+      question: "What size companies do you work with?",
+      answer: "We have experience working with businesses of every scale, from startups to Fortune 500 companies. While we develop cost-effective solutions for small businesses, we carry out comprehensive projects at the corporate level for large companies. Since each of our customers has different needs, we offer customized solutions suitable for their budget and requirements with our flexible approach. Regardless of project size, we adopt the same quality service understanding and prioritize customer satisfaction.",
       icon: "🎯",
       color: "from-pink-500 to-red-600"
     },
     {
       id: 4,
-      question: "Proje geliştirme süreciniz nasıl işler?",
-      answer: "Projelerimizi 4 ana aşamada gerçekleştiriyoruz: İlk olarak detaylı ihtiyaç analizi yaparak müşterinin gereksinimlerini tam olarak anlıyoruz. İkinci aşamada tasarım ve planlama sürecinde proje yol haritasını çıkarıyor, zaman çizelgesi oluşturuyoruz. Üçüncü aşama olan geliştirme ve test sürecinde kodlama, entegrasyon ve kalite kontrol işlemlerini gerçekleştiriyoruz. Son aşamada ise projeyi canlıya alıyor, lansman sonrası destek ve eğitim hizmetleri sağlıyoruz. Tüm süreç boyunca müşteriyle şeffaf iletişim halinde kalarak, her aşamada onay alıyoruz.",
+      question: "How does your project development process work?",
+      answer: "We carry out our projects in 4 main stages: First, we fully understand the customer's requirements by conducting a detailed needs analysis. In the second stage, we create the project roadmap and timeline in the design and planning process. In the third stage, which is development and testing, we perform coding, integration and quality control processes. In the final stage, we go live with the project and provide post-launch support and training services. We maintain transparent communication with the customer throughout the entire process and get approval at each stage.",
       icon: "⚡",
       color: "from-yellow-500 to-orange-600"
     },
     {
       id: 5,
-      question: "Proje teslimi sonrası destek veriyor musunuz?",
-      answer: "Evet, proje teslimi sonrası kapsamlı destek hizmetleri sunuyoruz. 7/24 teknik destek ekibimiz, sistem bakım ve güncellemeleri, güvenlik yamaları, performans optimizasyonları ve kullanıcı eğitimleri dahil olmak üzere geniş bir destek yelpazesi sağlıyoruz. Ayrıca projelerin sürdürülebilirliği için düzenli raporlama, analitik takip ve gerektiğinde yeni özellik ekleme hizmetleri de veriyoruz. Müşterilerimizle uzun vadeli partnerlik ilişkisi kurarak, iş süreçlerindeki değişimlere uygun güncellemeler yapıyoruz.",
+      question: "Do you provide support after project delivery?",
+      answer: "Yes, we provide comprehensive support services after project delivery. Our 7/24 technical support team provides a wide range of support including system maintenance and updates, security patches, performance optimizations and user training. Additionally, we also provide regular reporting, analytics tracking and new feature addition services when needed for the sustainability of projects. We establish long-term partnership relationships with our customers and make updates suitable for changes in business processes.",
       icon: "🛠️",
       color: "from-purple-500 to-pink-600"
     },
     {
       id: 6,
-      question: "Nasıl iletişime geçebilirim?",
-      answer: "Bizimle iletişime geçmek için birden fazla kanalımız bulunmaktadır. İletişim sayfamızdan detaylı bilgi formunu doldurarak ücretsiz danışmanlık talep edebilirsiniz. WhatsApp hattımızdan anında mesaj gönderebilir, telefon numaramızdan direkt arayabilir veya e-posta adresimizden detaylı bilgi alabilirsiniz. İlk görüşmede projenizi dinliyor, ihtiyaçlarınızı analiz ediyor ve size en uygun çözüm önerisini sunuyoruz. Görüşme talebinizi aldıktan sonra 24 saat içinde sizinle irtibata geçiyoruz.",
+      question: "How can I contact you?",
+      answer: "We have multiple channels to contact us. You can request free consultation by filling out the detailed information form from our contact page. You can send instant messages from our WhatsApp line, call directly from our phone number, or get detailed information from our email address. In the first meeting, we listen to your project, analyze your needs and offer you the most suitable solution. After receiving your meeting request, we contact you within 24 hours.",
       icon: "💬",
       color: "from-indigo-500 to-blue-600"
     }
@@ -62,9 +62,9 @@ export default function FAQ() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4 text-gray-900">Sık Sorulan Sorular</h2>
+          <h2 className="text-4xl font-bold mb-4 text-gray-900">Frequently Asked Questions</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Bayronix hakkında merak ettiğiniz soruların yanıtları
+            Answers to questions you're curious about Natron
           </p>
         </motion.div>
 
@@ -114,7 +114,7 @@ export default function FAQ() {
                             />
                           </svg>
                         </div>
-                        <span className="text-sm text-gray-500">Detayları gör</span>
+                        <span className="text-sm text-gray-500">View details</span>
                       </div>
                     </div>
                   </div>
@@ -166,10 +166,10 @@ export default function FAQ() {
                       ❓
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                      Bir soru seçin
+                      Select a question
                     </h3>
                     <p className="text-gray-600">
-                      Sol taraftaki sorulardan birini seçerek detaylı cevabını burada görebilirsiniz.
+                      You can see the detailed answer here by selecting one of the questions on the left.
                     </p>
                   </div>
                 )}

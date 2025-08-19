@@ -197,8 +197,8 @@ export default function AdminPage() {
           <div className="max-w-md mx-auto">
             <div className="text-center mb-8">
               <Image
-                src="/img/logo-bayronix.png"
-                alt="Bayronix Logo"
+                src="/img/logo-natron.png"
+                alt="Natron Logo"
                 width={200}
                 height={60}
                 className="h-16 w-auto object-contain mx-auto"
@@ -235,7 +235,7 @@ export default function AdminPage() {
                         value={loginForm.email}
                         onChange={handleLoginChange}
                         className="w-full pl-10 px-3 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-                        placeholder="admin@bayronix.com"
+                        placeholder="admin@natron.com"
                         required
                       />
                     </div>
@@ -281,7 +281,7 @@ export default function AdminPage() {
               </div>
               <div className="bg-gray-50 px-8 py-4 border-t border-gray-100">
                 <p className="text-xs text-center text-gray-500">
-                  © {new Date().getFullYear()} Bayronix Group Limited A.Ş
+                  © {new Date().getFullYear()} Natron Group Limited A.Ş
                 </p>
               </div>
             </div>
@@ -488,8 +488,8 @@ export default function AdminPage() {
         <div className="mb-8 bg-white rounded-xl shadow-lg p-4 flex justify-between items-center">
           <div className="flex items-center">
             <Image
-              src="/img/logo-bayronix.png"
-              alt="Bayronix Logo"
+              src="/img/logo-natron.png"
+              alt="Natron Logo"
               width={150}
               height={40}
               className="h-10 w-auto object-contain"

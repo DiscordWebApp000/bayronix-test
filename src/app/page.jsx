@@ -8,7 +8,6 @@ import TestimonialSlider from "@/components/TestimonialSlider";
 // Component imports
 import AboutUs from "@/components/AboutUs";
 import WhySpelya from "@/components/WhySpelya";
-import CustomerService from "@/components/CustomerService";
 import News from "@/components/News";
 import References from "@/components/References";
 import FAQ from "@/components/FAQ";
@@ -16,17 +15,20 @@ import FAQ from "@/components/FAQ";
 export default function Home() {
   return (
     <main>
-      {/* ===== Hero Section - Bayronix Group Limited A.Ş ===== */}
+      {/* ===== Hero Section - Natron Group Limited A.Ş ===== */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background with blur effect */}
+        {/* Background Video */}
         <div className="absolute inset-0">
-          <Image
-            src="/img/slider.png"
-            alt="Bayronix Group Limited A.Ş"
-            fill
-            className="object-cover scale-105 blur-sm opacity-60"
-            priority
-          />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="object-cover w-full h-full scale-105"
+          >
+            <source src="/159049-818026306_medium.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/60"></div>
         </div>
 
@@ -39,10 +41,10 @@ export default function Home() {
             className="text-white text-center flex flex-col items-center justify-center py-24"
           >
             <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight drop-shadow-lg">
-              Bayronix <span className="text-blue-400">Group Limited A.Ş</span>
+              Natron <span className="text-blue-400">Software Limited A.Ş</span>
             </h1>
             <p className="text-lg md:text-2xl text-gray-200 mb-10 max-w-2xl mx-auto font-medium drop-shadow-sm">
-              Teknoloji, E-ticaret ve Organizasyon sektörlerinde öncü markalarımızla geleceği şekillendiriyoruz.
+              We are shaping the future with our leading brands in Technology, E-commerce and Organization sectors.
             </p>
             
             {/* CTA buttons */}
@@ -51,13 +53,13 @@ export default function Home() {
                 href="/iletisim"
                 className="px-10 py-5 bg-blue-600 text-white rounded-xl font-bold text-lg shadow-xl hover:bg-blue-700 transition-colors"
               >
-                İletişime Geçin
+                Contact Us
               </Link>
               <Link
                 href="/hakkimizda"
                 className="px-10 py-5 bg-white/10 backdrop-blur-sm text-white rounded-xl font-bold text-lg hover:bg-white/20 transition-colors"
               >
-                Bizi Tanıyın
+                Get to Know Us
               </Link>
             </div>
           </motion.div>
@@ -85,13 +87,11 @@ export default function Home() {
       <TestimonialSlider />
 
       {/* Customer Service */}
-      <CustomerService />
       
       {/* FAQ */}
       <FAQ />
 
-      {/* Latest News */}
-      <News />
+    
 
       {/* ===== Contact CTA Section ===== */}
       <section className="relative py-32 overflow-hidden">
@@ -115,9 +115,9 @@ export default function Home() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">İş Birliği İçin Hazırız</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready for Collaboration</h2>
             <p className="text-xl text-gray-100 mb-10">
-            Bayronix Group Limited A.Ş olarak, işinizi bir üst seviyeye taşımak için yanınızdayız.
+              As Natron Group Limited A.Ş, we are here to take your business to the next level.
             </p>
             
             {/* CTA buttons */}
@@ -126,13 +126,13 @@ export default function Home() {
                 href="/iletisim"
                 className="inline-block px-10 py-5 bg-white text-blue-600 rounded-xl font-bold text-lg shadow-xl hover:bg-gray-100 transition-all duration-300 hover:scale-105"
               >
-                Ücretsiz Danışmanlık Alın
+                Get Free Consultation
               </Link>
               <Link
                 href="/hizmetlerimiz"
                 className="inline-block px-10 py-5 bg-white/10 backdrop-blur-sm text-white rounded-xl font-bold text-lg hover:bg-white/20 transition-all duration-300 hover:scale-105"
               >
-                Hizmetlerimizi İnceleyin
+                Explore Our Services
               </Link>
             </div>
           </motion.div>

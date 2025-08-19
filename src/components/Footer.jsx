@@ -14,7 +14,7 @@ const Footer = () => {
         setCopyStatus(prev => ({ ...prev, [type]: false }));
       }, 2000);
     } catch (err) {
-      console.error('Kopyalama başarısız:', err);
+      console.error('Copy failed:', err);
     }
   };
 
@@ -26,20 +26,20 @@ const Footer = () => {
           <div>
             <div className="mb-6">
               <Image
-                src="/img/logo-bayronix-dark.png"
-                alt="Bayronix Logo"
+                src="/img/logo-natron.png"
+                alt="Natron Logo"
                 width={180}
                 height={50}
                 className="h-12 w-auto object-contain"
               />
             </div>
             <p className="text-gray-400 mb-6">
-              Dijital dünyada güvenilir çözüm ortağınız. Web geliştirme, mobil
-              uygulama ve dijital çözümler sunuyoruz.
+              Your reliable solution partner in the digital world. We offer web development, mobile
+              applications and digital solutions.
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://twitter.com/bayronix"
+                href="https://twitter.com/natron"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -53,7 +53,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://www.linkedin.com/company/bayronix/?viewAsMember=true"
+                href="https://www.linkedin.com/company/natron/?viewAsMember=true"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -67,7 +67,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://www.instagram.com/bayronix_com"
+                href="https://www.instagram.com/natron_com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -81,7 +81,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://wa.me/905541418852"
+                href="https://wa.me/9999999999"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-green-400 transition-colors"
@@ -99,14 +99,14 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Hızlı Bağlantılar</h4>
+            <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
             <ul className="space-y-4">
               <li>
                 <Link
                   href="/"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Ana Sayfa
+                  Home
                 </Link>
               </li>
               <li>
@@ -114,7 +114,7 @@ const Footer = () => {
                   href="/hakkimizda"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Hakkımızda
+                  About Us
                 </Link>
               </li>
               <li>
@@ -122,7 +122,7 @@ const Footer = () => {
                   href="/haberler"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Haberler
+                  News
                 </Link>
               </li>
               <li>
@@ -130,7 +130,7 @@ const Footer = () => {
                   href="/iletisim"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  İletişim
+                  Contact
                 </Link>
               </li>
               <li>
@@ -138,7 +138,7 @@ const Footer = () => {
                   href="/terms"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Kullanım Koşulları
+                  Terms of Use
                 </Link>
               </li>
             </ul>
@@ -146,14 +146,14 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Hizmetlerimiz</h4>
+            <h4 className="text-lg font-semibold mb-6">Our Services</h4>
             <ul className="space-y-4">
               <li>
                 <Link
                   href="/hizmetlerimiz#service-1"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Teknoloji Danışmanlığı
+                  Technology Consulting
                 </Link>
               </li>
               <li>
@@ -161,7 +161,7 @@ const Footer = () => {
                   href="/hizmetlerimiz#service-2"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  E-Ticaret Çözümleri
+                  E-Commerce Solutions
                 </Link>
               </li>
               <li>
@@ -169,7 +169,7 @@ const Footer = () => {
                   href="/hizmetlerimiz#service-3"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Organizasyon Yönetimi
+                  Organization Management
                 </Link>
               </li>
               <li>
@@ -177,7 +177,7 @@ const Footer = () => {
                   href="/hizmetlerimiz"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Tüm Hizmetler
+                  All Services
                 </Link>
               </li>
             </ul>
@@ -185,7 +185,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">İletişim</h4>
+            <h4 className="text-lg font-semibold mb-6">Contact</h4>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
                 <svg
@@ -209,7 +209,7 @@ const Footer = () => {
                 </svg>
                 <span className="text-gray-400">
 
-                   İstanbul/Üsküdar
+                   Istanbul/Uskudar
                 </span>
               </li>
               <li className="flex items-center space-x-3">
@@ -229,10 +229,10 @@ const Footer = () => {
                 </svg>
                 </div>
                 <button
-                  onClick={() => handleCopy('+90 554 141 8852', 'phone')}
+                  onClick={() => handleCopy('+90 999 999 99 99', 'phone')}
                   className="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg text-gray-300 hover:text-white transition-all duration-300 flex items-center group relative cursor-pointer"
                 >
-                  <span className="font-medium">+90 (554) 141 88 52</span>
+                  <span className="font-medium">+90 (554) 999 99 99 </span>
                   {copyStatus.phone && (
                     <span className="ml-2 text-blue-400 animate-fade-in">✓</span>
                   )}
@@ -255,10 +255,10 @@ const Footer = () => {
                 </svg>
                 </div>
                 <button
-                  onClick={() => handleCopy('info@bayronix.com', 'email')}
+                  onClick={() => handleCopy('info@natron.com', 'email')}
                   className="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg text-gray-300 hover:text-white transition-all duration-300 flex items-center group relative cursor-pointer"
                 >
-                  <span className="font-medium">info@bayronix.com</span>
+                  <span className="font-medium">info@natron.com</span>
                   {copyStatus.email && (
                     <span className="ml-2 text-blue-400 animate-fade-in">✓</span>
                   )}
@@ -270,7 +270,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Bayronix Group Limited A.Ş Tüm hakları saklıdır.</p>
+          <p>&copy; {new Date().getFullYear()} Natron Group Limited A.Ş All rights reserved.</p>
         </div>
       </div>
     </footer>

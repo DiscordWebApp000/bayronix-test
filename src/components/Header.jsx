@@ -34,7 +34,7 @@ const Header = () => {
   };
 
   // Determine which logo to show based on scroll state and page type
-  const logoSrc = isScrolled || isTeamMemberPage || isProjectDetailPage ? "/img/logo-bayronix.png" : "/img/logo-bayronix-dark.png";
+  const logoSrc = isScrolled || isTeamMemberPage || isProjectDetailPage ? "/img/logo-natron.png" : "/img/logo-natron.png";
 
   return (
     <header
@@ -49,7 +49,7 @@ const Header = () => {
             <Link href="/" className="flex items-center">
               <Image
                 src={logoSrc}
-                alt="Bayronix Logo"
+                alt="Natron Logo"
                 width={180}
                 height={50}
                 className="h-12 w-auto object-contain"
@@ -72,7 +72,7 @@ const Header = () => {
                   : "text-white hover:text-blue-200"
               }`}
             >
-              Ana Sayfa
+              Home
             </Link>
             <Link
               href="/hakkimizda"
@@ -86,22 +86,9 @@ const Header = () => {
                   : "text-white hover:text-blue-200"
               }`}
             >
-              Hakkımızda
+              About Us
             </Link>
-            <Link
-              href="/ekibimiz"
-              className={`font-medium transition-colors ${
-                isActive("/ekibimiz")
-                  ? "text-blue-600 font-bold"
-                  : isScrolled
-                  ? "text-gray-700 hover:text-blue-600"
-                  : isTeamMemberPage || isProjectDetailPage
-                  ? "text-gray-900 hover:text-blue-600"
-                  : "text-white hover:text-blue-200"
-              }`}
-            >
-              Ekibimiz
-            </Link>
+           
             <Link
               href="/hizmetlerimiz"
               className={`font-medium transition-colors ${
@@ -114,7 +101,7 @@ const Header = () => {
                   : "text-white hover:text-blue-200"
               }`}
             >
-              Hizmetlerimiz
+              Services
             </Link>
             <Link
               href="/haberler"
@@ -128,7 +115,7 @@ const Header = () => {
                   : "text-white hover:text-blue-200"
               }`}
             >
-              Haberler
+              News
             </Link>
             <Link
               href="/iletisim"
@@ -142,13 +129,13 @@ const Header = () => {
                   : "text-white hover:text-blue-200"
               }`}
             >
-              İletişim
+              Contact
             </Link>
             <Link
               href="/iletisim"
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              Bizimle Çalışın
+              Work With Us
             </Link>
           </nav>
 
@@ -195,7 +182,7 @@ const Header = () => {
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                Ana Sayfa
+                Home
               </Link>
               <Link
                 href="/hakkimizda"
@@ -204,7 +191,7 @@ const Header = () => {
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                Hakkımızda
+                About Us
               </Link>
               <Link
                 href="/ekibimiz"
@@ -213,7 +200,7 @@ const Header = () => {
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                Ekibimiz
+                Our Team
               </Link>
               <Link
                 href="/hizmetlerimiz"
@@ -222,7 +209,7 @@ const Header = () => {
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                Hizmetlerimiz
+                Services
               </Link>
               <Link
                 href="/haberler"
@@ -231,7 +218,7 @@ const Header = () => {
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                Haberler
+                News
               </Link>
               <Link
                 href="/iletisim"
@@ -240,14 +227,14 @@ const Header = () => {
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                İletişim
+                Contact
               </Link>
               <Link
                 href="/iletisim"
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg text-center hover:bg-blue-700 transition-all shadow-md hover:shadow-lg transform hover:scale-105"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Bizimle Çalışın
+                Work With Us
               </Link>
             </nav>
           </div>

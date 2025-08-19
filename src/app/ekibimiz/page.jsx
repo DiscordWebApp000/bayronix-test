@@ -16,7 +16,7 @@ export default function TeamPage() {
 
   const companies = [
     "Tümü",
-    "Bayronix",
+    "Natron",
     "Spelya",
     "Random Bayim",
     "Spokingo",
@@ -71,7 +71,7 @@ export default function TeamPage() {
         <div className="absolute inset-0">
           <Image
             src="/img/slider3.jpg"
-            alt="Bayronix Team"
+            alt="Natron Team"
             fill
             className="object-cover"
             priority

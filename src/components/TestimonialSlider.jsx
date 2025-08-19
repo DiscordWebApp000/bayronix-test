@@ -5,275 +5,176 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function TestimonialSlider() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const testimonials = [
     {
       id: 1,
-      text: "Bayronix ile çalışmak vizyonumuzu tamamen değiştirdi. Dijital altyapımızı güçlendirerek rakiplerimizin önüne geçmemizi sağladılar.",
-      name: "Ahmet Kaya",
-      position: "Dijital Dönüşüm Müdürü",
-      company: "Nexora Teknoloji",
+      text: "Working with Natron completely changed our vision. They strengthened our digital infrastructure and helped us get ahead of our competitors.",
+      name: "Alexander Smith",
+      position: "Digital Transformation Manager",
+      company: "Nexora Technology",
       avatar: "/img/yorum1.jpg"
     },
     {
       id: 2,
-      text: "E-ticaret sitemizin geliştirilmesinde Bayronix'in uzmanlığından faydalandık. Satışlarımız %200 arttı! Müşteri hizmetleri de mükemmel.",
-      name: "Buse Korkmaz",
-      position: "Kurucu Ortak",
+      text: "We benefited from Natron's expertise in developing our e-commerce site. Our sales increased by 200%! Customer service is also excellent.",
+      name: "Emma Johnson",
+      position: "Founding Partner",
       company: "ModaShop Online",
       avatar: "/img/yorum2.jpg"
     },
     {
       id: 3,
-      text: "Mobil uygulamamızı geliştirirken Bayronix ekibi her aşamada bizimle birlikte hareket etti. Sonuç beklentilerimizi aştı.",
-      name: "Zeynep Alkan",
-      position: "Operasyon Direktörü",
-      company: "Logentrix Bilişim",
+      text: "While developing our mobile app, the Natron team moved together with us at every stage. The result exceeded our expectations.",
+      name: "Michael Chen",
+      position: "Operations Director",
+      company: "Logentrix IT",
       avatar: "/img/yorum3.jpg"
     },
     {
       id: 4,
-      text: "Dijital dönüşüm sürecimizde Bayronix'in danışmanlık hizmetleri çok değerliydi. İş süreçlerimiz optimize edildi ve verimliliğimiz arttı.",
-      name: "Ahmet Tunç",
-      position: "Proje Müdürü",
-      company: "Yılmaz Lojistik",
+      text: "Natron's consulting services were very valuable in our digital transformation process. Our business processes were optimized and our efficiency increased.",
+      name: "Sarah Williams",
+      position: "Project Manager",
+      company: "Yilmaz Logistics",
       avatar: "/img/yorum4.jpg"
     },
     {
       id: 5,
-      text: "Organizasyon yönetimi konusundaki uzmanlıkları sayesinde etkinliklerimiz çok başarılı geçti. Detaycı yaklaşımları takdire şayan.",
-      name: "Ece Karahan",
-      position: "Etkinlik Koordinatörü",
-      company: "Event Pro Organizasyon",
+      text: "Thanks to their expertise in organization management, our events were very successful. Their detailed approach is commendable.",
+      name: "David Rodriguez",
+      position: "Event Coordinator",
+      company: "Event Pro Organization",
       avatar: "/img/yorum5.jpg"
     },
     {
       id: 6,
-      text: "Sistem entegrasyonlarımızda yaşadığımız sorunları hızlıca çözdüler. 7/24 destek hizmetleri sayesinde işlerimiz aksama yaşanmadı.",
-      name: "Yusuf Çelik",
-      position: "IT Müdürü",
+      text: "They quickly solved the problems we experienced in our system integrations. Thanks to their 24/7 support services, our business did not experience any disruption.",
+      name: "Jennifer Lee",
+      position: "IT Manager",
       company: "Arslan Holdings",
       avatar: "/img/yorum6.jpg"
-    },
-    {
-      id: 7,
-      text: "Web tasarım projemizde modern ve kullanıcı dostu bir çözüm sundular. Site trafiğimiz %250 arttı ve dönüşüm oranları yükseldi.",
-      name: "Ayşe Kaya",
-      position: "Ürün Geliştirme Müdürü",
-      company: "Arvento Labs",
-      avatar: "/img/yorum7.jpg"
-    },
-    {
-      id: 8,
-      text: "Bulut çözümleri konusundaki rehberlik hizmetleri işimizi kolaylaştırdı. Altyapı maliyetlerimiz %40 azaldı.",
-      name: "Burak Sezer",
-      position: "CTO",
-      company: "Finyora Systems",
-      avatar: "/img/yorum8.jpg"
-    },
-    {
-      id: 9,
-      text: "Proje yönetimi süreçlerinde gösterdikleri profesyonellik etkileyiciydi. Her milestone zamanında teslim edildi.",
-      name: "Melis Aydın",
-      position: "Proje Müdürü",
-      company: "Clevora Yazılım",
-      avatar: "/img/yorum9.jpg"
-    },
-    {
-        id: 10,
-        text: "Bayronix ile çalışmak gerçekten harika bir deneyimdi. Projemizi zamanında ve bütçe dahilinde tamamladılar. Teknik ekipleri çok profesyonel ve çözüm odaklı.",
-        name: "Selin Taş",
-        position: "CEO",
-        company: "ZentraTech",
-        avatar: "/img/yorum10.jpg"
-      },
-      {
-        id: 11,
-        text: "SEO ve performans reklamcılığı konularında aldığımız destekle dönüşüm oranlarımız ciddi anlamda arttı.",
-        name: "Ayşe Gür",
-        position: "Pazarlama Müdürü",
-        company: "Valtrix Solutions",
-        avatar: "/img/yorum11.jpg"
-      },
-      {
-        id: 12, 
-        text: "Mobil uygulamamızı geliştirirken Bayronix ekibi her aşamada bizimle birlikte hareket etti. Sonuç beklentilerimizi aştı.",
-        name: "Sena Dursun",
-        position: "İş Geliştirme Direktörü",
-        company: "Modvia Interactive",
-        avatar: "/img/yorum12.jpg"
-      },
-      {
-        id: 13,
-        text: "Dijital dönüşüm sürecimizde Bayronix'in danışmanlık hizmetleri çok değerliydi. İş süreçlerimiz optimize edildi ve verimliliğimiz arttı.",
-        name: "Erkan Demirci",
-        position: "Operasyon Müdürü",
-        company: "Devlora Tech",
-        avatar: "/img/yorum13.jpg"
-      },
-      {
-        id: 14,
-        text: "Raporlama sistemlerinde sağladıkları entegrasyonlar sayesinde mali işler departmanımızda büyük kolaylık sağlandı.",
-        name: "Nazlı Erel",
-        position: "Finans Direktörü",
-        company: "Techsenta Global",
-        avatar: "/img/yorum14.jpg"
-      },
-      {
-        id: 15,
-        text: "Sistem entegrasyonlarımızda yaşadığımız sorunları hızlıca çözdüler. 7/24 destek hizmetleri sayesinde işlerimiz aksama yaşanmadı.",
-        name: "Barış Aksoy",
-        position: "Yazılım Takım Lideri",
-        company: "Altanet Solutions",
-        avatar: "/img/yorum15.jpg"
-      },
-      {
-        id: 16,
-        text: "Web tasarım projemizde modern ve kullanıcı dostu bir çözüm sundular. Site trafiğimiz %250 arttı ve dönüşüm oranları yükseldi.",
-        name: "Hilal Kaplan",
-        position: "Kıdemli Proje Yöneticisi",
-        company: "Lumeno Teknoloji",
-        avatar: "/img/yorum16.jpg"
-      },
-      {
-        id: 17,
-        text: "Bulut çözümleri konusundaki rehberlik hizmetleri işimizi kolaylaştırdı. Altyapı maliyetlerimiz %40 azaldı.",
-        name: "Onur Tekin",
-        position: "UI Developer",
-        company: "Brixera Creative",
-        avatar: "/img/yorum17.jpg"
-      },
-      {
-        id: 18,
-        text: "Proje yönetimi süreçlerinde gösterdikleri profesyonellik etkileyiciydi. Her milestone zamanında teslim edildi.",
-        name: "İlayda Şahin",
-        position: "Müşteri İlişkileri Müdürü",
-        company: "Kodmira Agency",
-        avatar: "/img/yorum18.jpg"
-      }
+    }
   ];
 
-  // Testimonial'ları 3 sütuna böl
-  const column1 = testimonials.filter((_, index) => index % 3 === 0);
-  const column2 = testimonials.filter((_, index) => index % 3 === 1);
-  const column3 = testimonials.filter((_, index) => index % 3 === 2);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 6000);
 
-  const TestimonialCard = ({ testimonial, delay = 0 }) => (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay }}
-      className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 mb-6 border border-gray-100"
-    >
-      <div className="mb-4">
-        <p className="text-gray-700 leading-relaxed italic">
-          "{testimonial.text}"
-        </p>
-      </div>
-      
-      <div className="flex items-center gap-3">
-        <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-blue-100 flex-shrink-0">
-          <Image
-            src={testimonial.avatar}
-            alt={testimonial.name}
-            width={48}
-            height={48}
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div>
-          <h4 className="font-semibold text-gray-900">
-            {testimonial.name}
-          </h4>
-          <p className="text-blue-600 text-sm font-medium">
-            {testimonial.position}
-          </p>
-          <p className="text-gray-500 text-xs">
-            {testimonial.company}
-          </p>
-        </div>
-      </div>
-    </motion.div>
-  );
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
 
-  const ScrollingColumn = ({ testimonials, direction = "up", duration = 30 }) => (
-    <div className="relative h-full overflow-hidden">
-      <motion.div
-        animate={{
-          y: direction === "up" ? [0, -100 * testimonials.length] : [-100 * testimonials.length, 0]
-        }}
-        transition={{
-          duration: duration,
-          ease: "linear",
-          repeat: Infinity,
-        }}
-        className="space-y-6"
-      >
-        {/* İlk set */}
-        {testimonials.map((testimonial, index) => (
-          <TestimonialCard key={`first-${testimonial.id}`} testimonial={testimonial} />
-        ))}
-        {/* Sonsuz döngü için ikinci set */}
-        {testimonials.map((testimonial, index) => (
-          <TestimonialCard key={`second-${testimonial.id}`} testimonial={testimonial} />
-        ))}
-      </motion.div>
-    </div>
-  );
+  const nextTestimonial = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevTestimonial = () => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-gray-50 relative overflow-hidden">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl font-bold mb-4 text-gray-900">
-            Müşterilerimiz <span className="text-blue-600">Ne Diyor?</span>
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            What Our <span className="text-blue-600">Clients Say</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Başarılı projelerimizde bizimle çalışan müşterilerimizin deneyimleri
+            Discover why leading companies choose Natron
           </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 h-[600px] relative">
-          {/* Sol Sütun - Yukarı kayıyor */}
-          <div className="relative">
-            <ScrollingColumn testimonials={column1} direction="up" duration={25} />
-            <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-blue-50 via-blue-50/80 to-transparent pointer-events-none z-10"></div>
-            <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-blue-50 via-blue-50/80 to-transparent pointer-events-none z-10"></div>
-          </div>
-
-          {/* Orta Sütun - Aşağı kayıyor */}
-          <div className="relative">
-            <ScrollingColumn testimonials={column2} direction="down" duration={30} />
-            <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-blue-50 via-blue-50/80 to-transparent pointer-events-none z-10"></div>
-            <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-blue-50 via-blue-50/80 to-transparent pointer-events-none z-10"></div>
-          </div>
-
-          {/* Sağ Sütun - Yukarı kayıyor */}
-          <div className="relative">
-            <ScrollingColumn testimonials={column3} direction="up" duration={35} />
-            <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-blue-50 via-blue-50/80 to-transparent pointer-events-none z-10"></div>
-            <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-blue-50 via-blue-50/80 to-transparent pointer-events-none z-10"></div>
-          </div>
         </div>
 
-        {/* Statistics Row */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
-        >
+        {/* Main Testimonial */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center"
+          >
+            {/* Quote */}
+            <div className="mb-8">
+              <svg className="w-12 h-12 text-blue-100 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+              </svg>
+              <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                "{testimonials[currentIndex].text}"
+              </p>
+            </div>
+
+            {/* Author */}
+            <div className="flex items-center justify-center gap-4">
+              <div className="w-16 h-16 rounded-full overflow-hidden">
+                <Image
+                  src={testimonials[currentIndex].avatar}
+                  alt={testimonials[currentIndex].name}
+                  width={64}
+                  height={64}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="text-left">
+                <h4 className="font-semibold text-gray-900">
+                  {testimonials[currentIndex].name}
+                </h4>
+                <p className="text-blue-600 text-sm">
+                  {testimonials[currentIndex].position}
+                </p>
+                <p className="text-gray-500 text-sm">
+                  {testimonials[currentIndex].company}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Navigation */}
+        <div className="flex items-center justify-center gap-8 mb-16">
+          <button
+            onClick={prevTestimonial}
+            className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:border-blue-300 hover:text-blue-600 transition-colors"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <div className="flex gap-2">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-2 h-2 rounded-full transition-colors ${
+                  index === currentIndex ? "bg-blue-600" : "bg-gray-300"
+                }`}
+              />
+            ))}
+          </div>
+
+          <button
+            onClick={nextTestimonial}
+            className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:border-blue-300 hover:text-blue-600 transition-colors"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
           {[
-            
+            { number: "500+", label: "Happy Clients" },
+            { number: "98%", label: "Satisfaction" },
+            { number: "24/7", label: "Support" },
+            { number: "5.0", label: "Rating" }
           ].map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">
+              <div className="text-2xl font-bold text-blue-600 mb-1">
                 {stat.number}
               </div>
               <div className="text-gray-600 text-sm">
@@ -281,7 +182,7 @@ export default function TestimonialSlider() {
               </div>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

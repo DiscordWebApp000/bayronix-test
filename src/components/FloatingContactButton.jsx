@@ -16,84 +16,86 @@ const FloatingContactButton = () => {
 
   const toggleOpen = () => setIsOpen(!isOpen);
 
-  const buttonVariants = {
-    closed: { scale: 1, rotate: 0 },
-    open: { scale: 1.1, rotate: 135, transition: { type: "spring", stiffness: 200, damping: 10 } },
-  };
-
-  const socialButtonVariants = {
-    closed: { opacity: 0, x: 0, y: 0, scale: 0.3 },
-    open: (i) => {
-      const radius = 120;
-      const startAngle = 180;
-      const endAngle = 270;
-      const angleRange = endAngle - startAngle;
-      const numButtons = socialButtons.length;
-      const angleStep = numButtons > 1 ? angleRange / (numButtons - 1) : 0;
-
-      const currentAngle = startAngle + i * angleStep;
-      const radians = (currentAngle * Math.PI) / 180;
-
-      const x = radius * Math.cos(radians);
-      const y = radius * Math.sin(radians);
-
-      return {
-        opacity: 1,
-        x: x,
-        y: y,
-        scale: 1,
-        transition: {
-          type: "spring",
-          stiffness: 200,
-          damping: 10,
-          delay: i * 0.08,
-        },
-      };
+  const contactOptions = [
+    { 
+      name: "Call", 
+      icon: faPhone, 
+      href: "tel:+905541418852",
+      color: "text-emerald-600",
+      bgColor: "bg-emerald-50 hover:bg-emerald-100"
     },
-  };
-
-  const socialButtons = [
-    { name: "Phone", icon: faPhone, href: "tel:+905541418852" },
-    { name: "WhatsApp", icon: faWhatsapp, href: "https://wa.me/905541418852" },
-    { name: "Instagram", icon: faInstagram, href: "https://www.instagram.com/spelya_yazilim/" },
+    { 
+      name: "WhatsApp", 
+      icon: faWhatsapp, 
+      href: "https://wa.me/905541418852",
+      color: "text-green-600",
+      bgColor: "bg-green-50 hover:bg-green-100"
+    },
+    { 
+      name: "Instagram", 
+      icon: faInstagram, 
+      href: "https://www.instagram.com/natron_com",
+      color: "text-pink-600",
+      bgColor: "bg-pink-50 hover:bg-pink-100"
+    },
   ];
 
   return (
-    <div className="fixed bottom-8 right-8 z-50 flex items-end justify-end">
+    <div className="fixed bottom-8 right-8 z-50">
       <AnimatePresence>
         {isOpen && (
-          <div className="absolute bottom-0 right-0 w-16 h-16">
-            {socialButtons.map((button, i) => (
-              <motion.div
-                key={button.name}
-                custom={i}
-                variants={socialButtonVariants}
-                initial="closed"
-                animate="open"
-                exit="closed"
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-              >
-                <Link href={button.href} target="_blank" rel="noopener noreferrer">
-                  <motion.button
-                    className="w-14 h-14 rounded-full bg-blue-600 text-white shadow-lg flex items-center justify-center text-2xl hover:bg-blue-700 transition-colors"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
+          <motion.div
+            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.95 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="absolute bottom-20 right-0 bg-white rounded-xl shadow-lg border border-gray-100 p-4 mb-3 min-w-[200px]"
+          >
+            {/* Contact Options */}
+            <div className="space-y-2">
+              {contactOptions.map((option, index) => (
+                <motion.div
+                  key={option.name}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.05, duration: 0.2 }}
+                >
+                  <Link 
+                    href={option.href} 
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <FontAwesomeIcon icon={button.icon} />
-                  </motion.button>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+                    <button
+                      className={`w-full p-3 rounded-lg ${option.bgColor} ${option.color} transition-all duration-200 flex items-center gap-3 group hover:shadow-sm`}
+                    >
+                      <FontAwesomeIcon icon={option.icon} className="text-lg" />
+                      <span className="font-medium text-sm">{option.name}</span>
+                    </button>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Simple Arrow */}
+            <div className="absolute -bottom-2 right-6 w-3 h-3 bg-white transform rotate-45 border-r border-b border-gray-100"></div>
+          </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Main Floating Button */}
       <motion.button
-        className="w-16 h-16 rounded-full bg-blue-600 text-white shadow-xl flex items-center justify-center text-4xl focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300 relative z-10"
-        variants={buttonVariants}
-        animate={isOpen ? "open" : "closed"}
+        className={`w-14 h-14 rounded-full shadow-lg flex items-center justify-center text-xl focus:outline-none transition-all duration-200 ${
+          isOpen 
+            ? 'bg-red-500 hover:bg-red-600 text-white' 
+            : 'bg-blue-600 hover:bg-blue-700 text-white'
+        }`}
         onClick={toggleOpen}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
+        animate={{
+          rotate: isOpen ? 45 : 0,
+        }}
+        transition={{ duration: 0.2 }}
       >
         <FontAwesomeIcon icon={isOpen ? faTimes : faCommentDots} />
       </motion.button>

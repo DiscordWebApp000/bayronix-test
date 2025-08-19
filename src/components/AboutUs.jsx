@@ -7,12 +7,12 @@ import { useState, useEffect, useRef } from "react";
 
 
 const AboutUs = () => {
-  // Bayronix-specific stats
+  // Natron-specific stats
   const stats = [
     { 
       number: 5, 
       suffix: '', 
-      label: 'Grup Şirketi',
+      label: 'Group Companies',
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -22,7 +22,7 @@ const AboutUs = () => {
     { 
       number: 3, 
       suffix: '', 
-      label: 'Sektör',
+      label: 'Sectors',
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -32,7 +32,7 @@ const AboutUs = () => {
     { 
       number: 6, 
       suffix: '+', 
-      label: 'Yıllık Deneyim',
+      label: 'Years of Experience',
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -52,9 +52,9 @@ const AboutUs = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4">Bayronix Hakkında</h2>
+          <h2 className="text-4xl font-bold mb-4">About Natron</h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Bayronix, farklı sektörlerde faaliyet gösteren öncü şirketleri tek bir çatı altında buluşturan modern bir Şirkettir. Güçlü iş birlikleri ve yenilikçi vizyonumuzla sürdürülebilir büyüme hedefliyoruz.
+            Natron is a modern company that brings together leading companies operating in different sectors under one roof. We aim for sustainable growth with our strong partnerships and innovative vision.
           </p>
         </motion.div>
 
@@ -132,9 +132,9 @@ const AboutUs = () => {
 
               {/* Content */}
               <div className="relative">
-                <h3 className="text-2xl font-bold mb-4">Vizyonumuz</h3>
+                <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
                 <p className="text-gray-600 text-lg">
-                  Bayronix, etik değerler ve güçlü iş birlikleriyle geleceğin lider Şirketlerinden biri olmayı hedefler.
+                  Natron aims to be one of the leading companies of the future with ethical values and strong partnerships.
                 </p>
               </div>
 
@@ -166,9 +166,9 @@ const AboutUs = () => {
 
               {/* Content */}
               <div className="relative">
-                <h3 className="text-2xl font-bold mb-4">Misyonumuz</h3>
+                <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
                 <p className="text-gray-600 text-lg">
-              Sektörler arası sinerji yaratarak, sürdürülebilir büyüme ve yenilikçi çözümlerle paydaşlarımıza değer katmak.
+              Creating synergy between sectors, adding value to our stakeholders through sustainable growth and innovative solutions.
             </p>
               </div>
 

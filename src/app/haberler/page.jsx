@@ -7,72 +7,72 @@ import { useState } from "react";
 
 const NewsPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [activeCategory, setActiveCategory] = useState("Tümü");
+  const [activeCategory, setActiveCategory] = useState("All");
 
   const newsItems = [
     {
       id: 1,
-      title: "Bayronix, Yeni Ofisini Açtı",
-      category: "Şirket Haberleri",
-      date: "15 Mart 2024",
+      title: "Natron Opens New Office",
+      category: "Company News",
+      date: "March 15, 2024",
       image: "/img/news/office.jpg",
-      description: "Büyüyen ekibimizle birlikte yeni ofisimize taşındık. Modern ve ferah çalışma alanımızda daha verimli projeler üretmeye devam edeceğiz.",
-      link: "/haberler/bayronix-yeni-ofisini-acti"
+      description: "We have moved to our new office with our growing team. We will continue to produce more efficient projects in our modern and spacious workspace.",
+      link: "/haberler/natron-opens-new-office"
     },
     {
       id: 2,
-      title: "Yeni Teknoloji Partnerliği",
-      category: "İş Ortaklıkları",
-      date: "10 Mart 2024",
+      title: "New Technology Partnership",
+      category: "Partnerships",
+      date: "March 10, 2024",
       image: "/img/news/partnership.jpg",
-      description: "Global teknoloji devi ile stratejik iş ortaklığımızı duyurmaktan mutluluk duyuyoruz. Bu iş birliği ile müşterilerimize daha kapsamlı çözümler sunacağız.",
-      link: "/haberler/yeni-teknoloji-partnerligi"
+      description: "We are pleased to announce our strategic business partnership with a global technology giant. Through this collaboration, we will offer more comprehensive solutions to our customers.",
+      link: "/haberler/new-technology-partnership"
     },
     {
       id: 3,
-      title: "Yeni Yazılım Çözümümüz Lansmanı",
-      category: "Ürün Haberleri",
-      date: "5 Mart 2024",
+      title: "Launch of Our New Software Solution",
+      category: "Product News",
+      date: "March 5, 2024",
       image: "/img/news/software.jpg",
-      description: "Müşterilerimizin ihtiyaçları doğrultusunda geliştirdiğimiz yeni yazılım çözümümüzü tanıtmaktan gurur duyuyoruz.",
-      link: "/haberler/yeni-yazilim-cozumumuz-lansmani"
+      description: "We are proud to introduce our new software solution developed in line with our customers' needs.",
+      link: "/haberler/launch-of-our-new-software-solution"
     },
     {
       id: 4,
-      title: "Ekip Büyüyor",
-      category: "Şirket Haberleri",
-      date: "1 Mart 2024",
+      title: "Team is Growing",
+      category: "Company News",
+      date: "March 1, 2024",
       image: "/img/news/team.jpg",
-      description: "Yeni projelerimiz ve büyüyen müşteri portföyümüz ile ekibimize yeni uzmanlar katıldı. Güçlü kadromuzla daha büyük projelere imza atacağız.",
-      link: "/haberler/ekip-buyuyor"
+      description: "New experts have joined our team with our new projects and growing customer portfolio. We will sign bigger projects with our strong staff.",
+      link: "/haberler/team-is-growing"
     },
     {
       id: 5,
-      title: "Sektör Ödülümüz",
-      category: "Başarılar",
-      date: "25 Şubat 2024",
+      title: "Our Industry Award",
+      category: "Achievements",
+      date: "February 25, 2024",
       image: "/img/news/award.jpg",
-      description: "Yılın En İyi Yazılım Şirketi ödülünü kazanmaktan gurur duyuyoruz. Bu başarı, müşterilerimize olan bağlılığımızın bir göstergesidir.",
-      link: "/haberler/sektor-odulumuz"
+      description: "We are proud to win the Best Software Company of the Year award. This success is an indicator of our commitment to our customers.",
+      link: "/haberler/our-industry-award"
     },
     {
       id: 6,
-      title: "Yeni Eğitim Programı",
-      category: "Eğitim",
-      date: "20 Şubat 2024",
+      title: "New Training Program",
+      category: "Education",
+      date: "February 20, 2024",
       image: "/img/news/training.jpg",
-      description: "Genç yazılımcıları desteklemek amacıyla başlattığımız eğitim programımızın detaylarını paylaşmaktan mutluluk duyuyoruz.",
-      link: "/haberler/yeni-egitim-programi"
+      description: "We are pleased to share the details of our training program launched to support young software developers.",
+      link: "/haberler/new-training-program"
     }
   ];
 
   const categories = [
-    "Tümü",
-    "Şirket Haberleri",
-    "İş Ortaklıkları",
-    "Ürün Haberleri",
-    "Başarılar",
-    "Eğitim"
+    "All",
+    "Company News",
+    "Partnerships",
+    "Product News",
+    "Achievements",
+    "Education"
   ];
 
   const containerVariants = {
@@ -108,19 +108,19 @@ const NewsPage = () => {
     const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       item.description.toLowerCase().includes(searchTerm.toLowerCase());
     
-    const matchesCategory = activeCategory === "Tümü" || item.category === activeCategory;
+    const matchesCategory = activeCategory === "All" || item.category === activeCategory;
     
     return matchesSearch && matchesCategory;
   });
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 overflow-hidden">
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/img/news/news-hero.jpg"
-            alt="Bayronix Haberler"
+            alt="Natron News"
             fill
             className="object-cover"
             priority
@@ -133,30 +133,31 @@ const NewsPage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-white"
+              className="text-white text-center"
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                Haberler
-                <span className="text-blue-400"> ve Duyurular</span>
+                News
+                <span className="text-blue-400"> & Updates</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-200 mb-8">
-                Bayronix'ten en son gelişmeler ve güncel haberler
+                Latest developments and current news from Natron
               </p>
+              <div className="w-24 h-1 bg-blue-400 mx-auto rounded-full"></div>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Search Bar */}
-      <section className="py-6 pb-0">
+      <section className="py-8 pb-0">
         <div className="container mx-auto px-4">
           <div className="max-w-md mx-auto relative">
             <input
               type="text"
-              placeholder="Haber ara..."
+              placeholder="Search news..."
               value={searchTerm}
               onChange={handleSearchChange}
-              className="w-full pl-4 pr-10 py-3 border-0 rounded-xl bg-gray-50 focus:outline-none focus:bg-white focus:shadow-lg transition-all duration-300 text-gray-900 placeholder-gray-500 text-sm"
+              className="w-full pl-4 pr-10 py-3 border-0 rounded-xl bg-white shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:shadow-xl transition-all duration-300 text-gray-900 placeholder-gray-500 text-sm"
             />
             <svg
               className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"
@@ -176,7 +177,7 @@ const NewsPage = () => {
       </section>
 
       {/* Categories */}
-      <section className="py-8 bg-white border-b border-gray-100">
+      <section className="py-8 bg-transparent">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category, index) => (
@@ -185,10 +186,10 @@ const NewsPage = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => handleCategoryChange(category)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                className={`px-6 py-3 rounded-xl text-sm font-medium transition-all duration-300 ${
                   category === activeCategory
-                    ? "bg-blue-600 text-white"
-                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                    ? "bg-blue-600 text-white shadow-lg shadow-blue-600/30"
+                    : "bg-white text-gray-600 hover:bg-gray-50 hover:shadow-md border border-gray-200"
                 }`}
               >
                 {category}
@@ -199,8 +200,12 @@ const NewsPage = () => {
       </section>
 
       {/* News Grid */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-transparent relative">
+        {/* Background decoration */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full -translate-y-48 translate-x-48 opacity-20"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-gray-100 rounded-full translate-y-32 -translate-x-32 opacity-20"></div>
+        
+        <div className="container mx-auto px-4 relative">
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -212,7 +217,7 @@ const NewsPage = () => {
                 <motion.div
                   key={item.id}
                   variants={itemVariants}
-                  className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+                  className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 transform hover:-translate-y-2"
                 >
                   <Link href={item.link} className="block group">
                     <div className="relative h-48 overflow-hidden">
@@ -220,25 +225,27 @@ const NewsPage = () => {
                         src={item.image}
                         alt={item.title}
                         fill
-                        className="object-cover transform group-hover:scale-110 transition-transform duration-500"
+                        className="object-cover transform group-hover:scale-110 transition-transform duration-700"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    </div>
-                    <div className="p-6">
-                      <div className="flex items-center gap-4 mb-3">
-                        <span className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">
+                      <div className="absolute top-4 left-4">
+                        <span className="px-3 py-1 bg-blue-600/90 backdrop-blur text-white rounded-full text-xs font-medium shadow-lg">
                           {item.category}
                         </span>
-                        <span className="text-gray-500 text-sm">{item.date}</span>
                       </div>
-                      <h3 className="text-xl font-semibold mb-3 group-hover:text-blue-600 transition-colors">
+                    </div>
+                    <div className="p-6">
+                      <div className="flex items-center gap-4 mb-4">
+                        <span className="text-gray-500 text-sm font-medium">{item.date}</span>
+                      </div>
+                      <h3 className="text-xl font-bold mb-3 group-hover:text-blue-600 transition-colors leading-tight">
                         {item.title}
                       </h3>
-                      <p className="text-gray-600 mb-4 line-clamp-3">
+                      <p className="text-gray-600 mb-4 line-clamp-3 leading-relaxed">
                         {item.description}
                       </p>
-                      <div className="flex items-center text-blue-600 font-medium group-hover:translate-x-2 transition-transform">
-                        Devamını Oku
+                      <div className="flex items-center text-blue-600 font-semibold group-hover:translate-x-2 transition-transform duration-300">
+                        Read More
                         <svg
                           className="w-5 h-5 ml-2"
                           fill="none"
@@ -261,9 +268,15 @@ const NewsPage = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="col-span-full text-center text-gray-600 py-10"
+                className="col-span-full text-center text-gray-600 py-16"
               >
-                Arama kriterlerinize uygun haber bulunamadı.
+                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-700 mb-2">No News Found</h3>
+                <p className="text-gray-500">No news matching your search criteria was found.</p>
               </motion.div>
             )}
           </motion.div>
@@ -289,22 +302,27 @@ const NewsPage = () => {
             transition={{ duration: 0.8 }}
             className="max-w-2xl mx-auto text-center text-white"
           >
-            <h2 className="text-3xl font-bold mb-4">Güncel Haberlerden Haberdar Olun</h2>
-            <p className="text-blue-100 mb-8">
-              En son haberlerimizi ve duyurularımızı kaçırmamak için bültenimize abone olun.
+            <div className="w-16 h-16 bg-white/10 backdrop-blur rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h2 className="text-4xl font-bold mb-4">Stay Updated with Latest News</h2>
+            <p className="text-blue-100 mb-8 text-lg">
+              Subscribe to our newsletter to not miss our latest news and announcements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="E-posta adresiniz"
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                placeholder="Your email address"
+                className="flex-1 px-4 py-3 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-lg"
               />
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+                className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                Abone Ol
+                Subscribe
               </motion.button>
             </div>
           </motion.div>

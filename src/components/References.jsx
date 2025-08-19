@@ -9,55 +9,79 @@ const References = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'Tümü' },
-    { id: 'technology', name: 'Teknoloji' },
-    { id: 'ecommerce', name: 'E-Ticaret' },
-    { id: 'design', name: 'Tasarım' },
-    { id: 'marketing', name: 'Pazarlama' },
+    { id: 'all', name: 'All' },
+    { id: 'technology', name: 'Technology' },
+    { id: 'ecommerce', name: 'E-Commerce' },
+    { id: 'design', name: 'Design' },
+    { id: 'marketing', name: 'Marketing' },
   ];
 
-  const projects = [
+  const achievements = [
     {
       id: 1,
-      title: 'Random Bayim ',
-      category: 'ecommerce',
-      image: '/img/randombayim1.jpg',
-      description: 'E-ticaret platformu',
-      size: 'large'
+      title: '500+ Projects',
+      category: 'technology',
+      icon: '🚀',
+      description: 'Successfully completed projects across various industries',
+      color: 'from-blue-500 to-blue-600'
     },
     {
       id: 2,
-      title: 'Spelya Yazılım',
+      title: '50+ Clients',
       category: 'ecommerce',
-      image: '/img/spelya.jpg',
-      description: 'Yazılım platformu',
-      size: 'medium'
+      icon: '👥',
+      description: 'Trusted by businesses worldwide',
+      color: 'from-green-500 to-green-600'
     },
     {
       id: 3,
-      title: 'Spokingo',
+      title: '6+ Years',
+      category: 'design',
+      icon: '⏰',
+      description: 'Years of industry experience',
+      color: 'from-purple-500 to-purple-600'
+    },
+    {
+      id: 4,
+      title: '24/7 Support',
+      category: 'marketing',
+      icon: '🛡️',
+      description: 'Round-the-clock customer support',
+      color: 'from-orange-500 to-orange-600'
+    },
+    {
+      id: 5,
+      title: '99% Success',
+      category: 'technology',
+      icon: '🎯',
+      description: 'Project success rate',
+      color: 'from-red-500 to-red-600'
+    },
+    {
+      id: 6,
+      title: 'Global Reach',
       category: 'ecommerce',
-      image: '/img/spokingo.jpg',
-      description: 'Dekarasyon Oyuncak',
-      size: 'medium'
+      icon: '🌍',
+      description: 'Serving clients internationally',
+      color: 'from-indigo-500 to-indigo-600'
     },
   ];
 
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
+  const filteredAchievements = activeFilter === 'all' 
+    ? achievements 
+    : achievements.filter(achievement => achievement.category === activeFilter);
 
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Çalıştığımız Projeler</h2>
+          <h2 className="text-4xl font-bold mb-4">Our Achievements</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Farklı sektörlerde geliştirdiğimiz projeler ve başarı hikayelerimiz
+            Numbers that tell our success story and demonstrate our commitment to excellence
           </p>
         </div>
 
-        {/* Filtreler */}
+        {/* Filters */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
             <button
@@ -73,52 +97,65 @@ const References = () => {
           ))}
         </div>
 
-        {/* Proje Grid */}
+        {/* Achievements Grid */}
         <div className="max-w-7xl mx-auto">
           <motion.div 
             layout
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             <AnimatePresence>
-              {filteredProjects.map((project) => {
-                const sizeClasses = {
-                  small: 'col-span-1 row-span-1',
-                  medium: 'col-span-2 row-span-1',
-                  large: 'col-span-2 row-span-2'
-                };
-
-                return (
-                  <motion.div
-                    key={project.id}
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className={`group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer
-                      ${sizeClasses[project.size]}`}
-                  >
-                    <Link href={`/projeler/${project.id}`} className="block w-full h-full">
-                      <div className="relative w-full h-full">
-                        <Image
-                          src={project.image}
-                          alt={project.title}
-                          fill
-                          className="object-cover group-hover:scale-110 transition-transform duration-500"
-                        />
-                        {/* Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                          <div className="text-white">
-                            <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                            <p className="text-sm opacity-90">{project.description}</p>
-                          </div>
-                        </div>
-                      </div>
-                    </Link>
-                  </motion.div>
-                );
-              })}
+              {filteredAchievements.map((achievement, index) => (
+                <motion.div
+                  key={achievement.id}
+                  layout
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  className="group"
+                >
+                  <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 h-full">
+                    {/* Icon */}
+                    <div className={`w-16 h-16 bg-gradient-to-r ${achievement.color} rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                      <span>{achievement.icon}</span>
+                    </div>
+                    
+                    {/* Content */}
+                    <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                      {achievement.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      {achievement.description}
+                    </p>
+                    
+                    {/* Hover Effect */}
+                    <div className="mt-6 h-1 bg-gradient-to-r from-blue-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                  </div>
+                </motion.div>
+              ))}
             </AnimatePresence>
+          </motion.div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white max-w-2xl mx-auto"
+          >
+            <h3 className="text-2xl font-bold mb-4">Ready to Join Our Success Story?</h3>
+            <p className="text-blue-100 mb-6">
+              Let's work together to achieve your business goals and add another success story to our portfolio.
+            </p>
+            <Link
+              href="/iletisim"
+              className="inline-block bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+            >
+              Start Your Project
+            </Link>
           </motion.div>
         </div>
       </div>
