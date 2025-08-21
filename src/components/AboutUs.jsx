@@ -10,9 +10,9 @@ const AboutUs = () => {
   // Natron-specific stats
   const stats = [
     { 
-      number: 5, 
+      number: 9, 
       suffix: '', 
-      label: 'Group Companies',
+      label: 'Representation',
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -20,9 +20,9 @@ const AboutUs = () => {
       )
     },
     { 
-      number: 3, 
+      number: 218, 
       suffix: '', 
-      label: 'Sectors',
+      label: 'Project',
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -30,7 +30,7 @@ const AboutUs = () => {
       )
     },
     { 
-      number: 6, 
+      number: 15, 
       suffix: '+', 
       label: 'Years of Experience',
       icon: (
@@ -54,8 +54,7 @@ const AboutUs = () => {
         >
           <h2 className="text-4xl font-bold mb-4">About Natron</h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Natron is a modern company that brings together leading companies operating in different sectors under one roof. We aim for sustainable growth with our strong partnerships and innovative vision.
-          </p>
+          Natron is a modern company that aims to develop interdisciplinary technologies in the growing field of artificial intelligence and apply them for the benefit of humanity. With our strong partnerships and innovative vision, we offer sustainable growth.          </p>
         </motion.div>
 
         {/* Stats Section */}
@@ -134,8 +133,7 @@ const AboutUs = () => {
               <div className="relative">
                 <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
                 <p className="text-gray-600 text-lg">
-                  Natron aims to be one of the leading companies of the future with ethical values and strong partnerships.
-                </p>
+                Natron Software is a research services company that aims to deliver innovative and user-friendly interactive products to the global artificial intelligence and fintech sectors.                </p>
               </div>
 
               {/* Hover Line Effect */}
@@ -168,8 +166,7 @@ const AboutUs = () => {
               <div className="relative">
                 <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
                 <p className="text-gray-600 text-lg">
-              Creating synergy between sectors, adding value to our stakeholders through sustainable growth and innovative solutions.
-            </p>
+                With its research-driven approach, it develops innovative products in the fields of artificial intelligence and fintech to contribute to the digitalization process of individuals, institutions, and developer communities, making it accessible and designing a high value-added technological future.            </p>
               </div>
 
               {/* Hover Line Effect */}

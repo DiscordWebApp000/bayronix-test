@@ -37,7 +37,7 @@ const WhySpelya = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Why Natron?</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            We make a difference with our modern holding structure, strong partnerships and innovative vision.
+          We are the choice of strong companies with reliable projects and the right innovations.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">

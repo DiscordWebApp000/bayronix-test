@@ -34,8 +34,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-gray-400 mb-6">
-              Your reliable solution partner in the digital world. We offer web development, mobile
-              applications and digital solutions.
+            Ready to become your most trusted company in Software Development once again.
             </p>
             <div className="flex space-x-4">
               <a
@@ -111,23 +110,16 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/hakkimizda"
+                  href="/about"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   About Us
                 </Link>
               </li>
+             
               <li>
                 <Link
-                  href="/haberler"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  News
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/iletisim"
+                  href="/contact"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Contact
@@ -150,7 +142,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <Link
-                  href="/hizmetlerimiz#service-1"
+                  href="/services#service-1"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Technology Consulting
@@ -158,7 +150,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/hizmetlerimiz#service-2"
+                  href="/services#service-2"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   E-Commerce Solutions
@@ -166,7 +158,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/hizmetlerimiz#service-3"
+                  href="/services#service-3"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Organization Management
@@ -174,7 +166,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/hizmetlerimiz"
+                  href="/services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   All Services
@@ -209,7 +201,7 @@ const Footer = () => {
                 </svg>
                 <span className="text-gray-400">
 
-                   Istanbul/Uskudar
+                Istanbul/Ataşehir
                 </span>
               </li>
               <li className="flex items-center space-x-3">
@@ -255,10 +247,10 @@ const Footer = () => {
                 </svg>
                 </div>
                 <button
-                  onClick={() => handleCopy('info@natron.com', 'email')}
+                  onClick={() => handleCopy('info@natronyazilim.com ', 'email')}
                   className="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg text-gray-300 hover:text-white transition-all duration-300 flex items-center group relative cursor-pointer"
                 >
-                  <span className="font-medium">info@natron.com</span>
+                  <span className="font-medium">info@natronsoftware.com</span>
                   {copyStatus.email && (
                     <span className="ml-2 text-blue-400 animate-fade-in">✓</span>
                   )}
@@ -270,7 +262,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Natron Group Limited A.Ş All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Natron Group Limited Şti All rights reserved.</p>
         </div>
       </div>
     </footer>

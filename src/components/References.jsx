@@ -19,7 +19,7 @@ const References = () => {
   const achievements = [
     {
       id: 1,
-      title: '500+ Projects',
+      title: '200+ Projects',
       category: 'technology',
       icon: '🚀',
       description: 'Successfully completed projects across various industries',
@@ -27,7 +27,7 @@ const References = () => {
     },
     {
       id: 2,
-      title: '50+ Clients',
+      title: '400+ Clients',
       category: 'ecommerce',
       icon: '👥',
       description: 'Trusted by businesses worldwide',
@@ -35,34 +35,34 @@ const References = () => {
     },
     {
       id: 3,
-      title: '6+ Years',
-      category: 'design',
-      icon: '⏰',
-      description: 'Years of industry experience',
+      title: '47 Awards',
+      category: 'awards',
+      icon: '🏆',
+      description: 'Interdisciplinary awards',
       color: 'from-purple-500 to-purple-600'
     },
     {
       id: 4,
-      title: '24/7 Support',
+      title: 'Successful Software',
       category: 'marketing',
       icon: '🛡️',
-      description: 'Round-the-clock customer support',
+      description: 'Worldwide reliable software',
       color: 'from-orange-500 to-orange-600'
     },
     {
       id: 5,
-      title: '99% Success',
+      title: '94% Loyal',
       category: 'technology',
       icon: '🎯',
-      description: 'Project success rate',
+      description: 'Our customers who are loyal to our work',
       color: 'from-red-500 to-red-600'
     },
     {
       id: 6,
-      title: 'Global Reach',
+      title: 'National Representation',
       category: 'ecommerce',
       icon: '🌍',
-      description: 'Serving clients internationally',
+      description: 'SpaceClaim Main Representative',
       color: 'from-indigo-500 to-indigo-600'
     },
   ];
@@ -77,25 +77,10 @@ const References = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Our Achievements</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Numbers that tell our success story and demonstrate our commitment to excellence
-          </p>
+          Specific reasons why natron has made its mark on the world </p>
         </div>
 
-        {/* Filters */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveFilter(category.id)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300
-                ${activeFilter === category.id 
-                  ? 'bg-blue-600 text-white shadow-lg' 
-                  : 'bg-white text-gray-600 hover:bg-gray-100'}`}
-            >
-              {category.name}
-            </button>
-          ))}
-        </div>
+       
 
         {/* Achievements Grid */}
         <div className="max-w-7xl mx-auto">
@@ -151,7 +136,7 @@ const References = () => {
               Let's work together to achieve your business goals and add another success story to our portfolio.
             </p>
             <Link
-              href="/iletisim"
+              href="/contact"
               className="inline-block bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
             >
               Start Your Project

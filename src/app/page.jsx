@@ -15,7 +15,7 @@ import FAQ from "@/components/FAQ";
 export default function Home() {
   return (
     <main>
-      {/* ===== Hero Section - Natron Group Limited A.Ş ===== */}
+      {/* ===== Hero Section - Natron Group Limited Şti ===== */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Video */}
         <div className="absolute inset-0">
@@ -41,22 +41,21 @@ export default function Home() {
             className="text-white text-center flex flex-col items-center justify-center py-24"
           >
             <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight drop-shadow-lg">
-              Natron <span className="text-blue-400">Software Limited A.Ş</span>
+              Natron <span className="text-blue-400">Software Limited Şti</span>
             </h1>
             <p className="text-lg md:text-2xl text-gray-200 mb-10 max-w-2xl mx-auto font-medium drop-shadow-sm">
-              We are shaping the future with our leading brands in Technology, E-commerce and Organization sectors.
-            </p>
+            We are pioneering the industry and building a bright future in Artificial Intelligence, Machine Development, and Computer Technologies.            </p>
             
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/iletisim"
+                href="/contact"
                 className="px-10 py-5 bg-blue-600 text-white rounded-xl font-bold text-lg shadow-xl hover:bg-blue-700 transition-colors"
               >
                 Contact Us
               </Link>
               <Link
-                href="/hakkimizda"
+                href="/about"
                 className="px-10 py-5 bg-white/10 backdrop-blur-sm text-white rounded-xl font-bold text-lg hover:bg-white/20 transition-colors"
               >
                 Get to Know Us
@@ -117,19 +116,19 @@ export default function Home() {
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready for Collaboration</h2>
             <p className="text-xl text-gray-100 mb-10">
-              As Natron Group Limited A.Ş, we are here to take your business to the next level.
+              Natron Group Limited Şti, we are here to take your business to the next level.
             </p>
             
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/iletisim"
+                href="/contact"
                 className="inline-block px-10 py-5 bg-white text-blue-600 rounded-xl font-bold text-lg shadow-xl hover:bg-gray-100 transition-all duration-300 hover:scale-105"
               >
                 Get Free Consultation
               </Link>
               <Link
-                href="/hizmetlerimiz"
+                href="/services"
                 className="inline-block px-10 py-5 bg-white/10 backdrop-blur-sm text-white rounded-xl font-bold text-lg hover:bg-white/20 transition-all duration-300 hover:scale-105"
               >
                 Explore Our Services

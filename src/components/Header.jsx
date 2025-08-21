@@ -75,9 +75,9 @@ const Header = () => {
               Home
             </Link>
             <Link
-              href="/hakkimizda"
+              href="/about"
               className={`font-medium transition-colors ${
-                isActive("/hakkimizda")
+                isActive("/about")
                   ? "text-blue-600 font-bold"
                   : isScrolled
                   ? "text-gray-700 hover:text-blue-600"
@@ -90,9 +90,9 @@ const Header = () => {
             </Link>
            
             <Link
-              href="/hizmetlerimiz"
+              href="/services"
               className={`font-medium transition-colors ${
-                isActive("/hizmetlerimiz")
+                isActive("/services")
                   ? "text-blue-600 font-bold"
                   : isScrolled
                   ? "text-gray-700 hover:text-blue-600"
@@ -103,24 +103,11 @@ const Header = () => {
             >
               Services
             </Link>
+            
             <Link
-              href="/haberler"
+              href="/contact"
               className={`font-medium transition-colors ${
-                isActive("/haberler")
-                  ? "text-blue-600 font-bold"
-                  : isScrolled
-                  ? "text-gray-700 hover:text-blue-600"
-                  : isTeamMemberPage || isProjectDetailPage
-                  ? "text-gray-900 hover:text-blue-600"
-                  : "text-white hover:text-blue-200"
-              }`}
-            >
-              News
-            </Link>
-            <Link
-              href="/iletisim"
-              className={`font-medium transition-colors ${
-                isActive("/iletisim")
+                isActive("/contact")
                   ? "text-blue-600 font-bold"
                   : isScrolled
                   ? "text-gray-700 hover:text-blue-600"
@@ -131,12 +118,7 @@ const Header = () => {
             >
               Contact
             </Link>
-            <Link
-              href="/iletisim"
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all shadow-md hover:shadow-lg transform hover:scale-105"
-            >
-              Work With Us
-            </Link>
+            
           </nav>
 
           {/* Mobile Menu Button */}
@@ -185,9 +167,9 @@ const Header = () => {
                 Home
               </Link>
               <Link
-                href="/hakkimizda"
+                href="/about"
                 className={`font-medium ${
-                  isActive("/hakkimizda") ? "text-blue-600 font-bold" : "text-gray-800"
+                  isActive("/about") ? "text-blue-600 font-bold" : "text-gray-800"
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -203,9 +185,9 @@ const Header = () => {
                 Our Team
               </Link>
               <Link
-                href="/hizmetlerimiz"
+                href="/services"
                 className={`font-medium ${
-                  isActive("/hizmetlerimiz") ? "text-blue-600 font-bold" : "text-gray-800"
+                  isActive("/services") ? "text-blue-600 font-bold" : "text-gray-800"
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -221,21 +203,15 @@ const Header = () => {
                 News
               </Link>
               <Link
-                href="/iletisim"
+                href="/contact"
                 className={`font-medium ${
-                  isActive("/iletisim") ? "text-blue-600 font-bold" : "text-gray-800"
+                  isActive("/contact") ? "text-blue-600 font-bold" : "text-gray-800"
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
               </Link>
-              <Link
-                href="/iletisim"
-                className="bg-blue-600 text-white px-6 py-2 rounded-lg text-center hover:bg-blue-700 transition-all shadow-md hover:shadow-lg transform hover:scale-105"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Work With Us
-              </Link>
+             
             </nav>
           </div>
         )}

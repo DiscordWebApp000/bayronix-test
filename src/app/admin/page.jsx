@@ -281,7 +281,7 @@ export default function AdminPage() {
               </div>
               <div className="bg-gray-50 px-8 py-4 border-t border-gray-100">
                 <p className="text-xs text-center text-gray-500">
-                  © {new Date().getFullYear()} Natron Group Limited A.Ş
+                  © {new Date().getFullYear()} Natron Group Limited Şti
                 </p>
               </div>
             </div>
